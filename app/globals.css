@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --lganc-dark-green: #3f7a73;
+  /* Brand teal (legacy name --lganc-orange kept for existing class usage) */
+  --lganc-teal: #6eb6af;
+  --lganc-orange: var(--lganc-teal);
+  --lganc-light-green: #e8f2f0;
+  --lganc-beige: #f5f1e9;
+  --lganc-white: #ffffff;
+  --background: #f5f1e9;
+  --foreground: #3f7a73;
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-montserrat);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-lganc-dark-green: var(--lganc-dark-green);
+  --color-lganc-orange: var(--lganc-orange);
+  --color-lganc-light-green: var(--lganc-light-green);
+  --color-lganc-beige: var(--lganc-beige);
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
+}
+
+body {
+  background: var(--lganc-beige);
+  color: var(--lganc-dark-green);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-body {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+/* Dashboard surface helpers */
+.dash-surface {
+  background: var(--lganc-white);
+  border: 1px solid color-mix(in srgb, var(--lganc-light-green) 55%, white);
+}
+
+.dash-muted {
+  color: color-mix(in srgb, var(--lganc-dark-green) 65%, white);
+}

@@ -38,7 +38,7 @@ export function BrandMark({
       <p className="font-heading text-lg font-semibold tracking-wide text-[var(--lganc-orange)]">
         LGANC
       </p>
-      <p className="font-heading text-[0.7rem] tracking-[0.18em] text-[var(--lganc-light-green)]">
+      <p className="font-heading text-[0.7rem] tracking-[0.18em] text-[var(--lganc-muted)]">
         NURSING CONCIERGE
       </p>
     </div>

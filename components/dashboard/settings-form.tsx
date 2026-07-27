@@ -148,15 +148,16 @@ export function SettingsForm({ initial }: SettingsFormProps) {
               placeholder={
                 initial.hasApiKey
                   ? initial.cngApiKeyMasked
-                  : "Paste Headers API key"
+                  : "Paste URL API_KEY"
               }
               value={cngApiKey}
               onChange={(e) => setCngApiKey(e.target.value)}
               autoComplete="off"
             />
             <p className="text-xs text-[var(--lganc-dark-green)]/55">
-              Use the Headers key (apikey). Leave blank to keep the current
-              value.
+              Use the URL key labeled{" "}
+              <span className="font-medium">API_KEY</span> in PayLanes (not the
+              Headers apikey). Leave blank to keep the current value.
             </p>
           </div>
           <div className="space-y-2">

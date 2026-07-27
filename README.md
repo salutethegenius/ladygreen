@@ -74,8 +74,8 @@ When you have a free cloud slot (or pause unused projects):
 
 ## Cash N' Go (when ready to test payments)
 
-Open **Settings** and save Merchant ID `3835` + the Headers API key (`apikey`).  
-Choose QA or Production endpoint. Webhook URL (needs a public host — not localhost):
+Open **Settings** and save Merchant ID + the PayLanes **URL `API_KEY`**  
+(not the Headers `apikey`). Choose QA or Production endpoint. Webhook URL (needs a public host — not localhost):
 ```
 https://<your-vercel-domain>/api/webhooks/cng
 ```

@@ -39,7 +39,7 @@ export type CngUrlParams = {
  * - Never return this URL in JSON API responses (only redirect)
  * - Never log the full payment URL
  * - Set Referrer-Policy: no-referrer on the redirect response
- * - Prefer rotating the Headers API key if it may have been exposed
+ * - Prefer rotating the URL API_KEY if it may have been exposed
  */
 export function buildCngPaymentUrl(params: CngUrlParams): string {
   // Browser return pages (display only — settlement is via signed webhook)

@@ -47,7 +47,7 @@ export default async function CngSuccessPage({
             <h1 className="font-heading text-2xl text-red-700">
               Invalid payment response
             </h1>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-[var(--lganc-muted)]">
               We could not verify this return. If you were charged, contact the
               studio.
             </p>
@@ -57,7 +57,7 @@ export default async function CngSuccessPage({
             <h1 className="font-heading text-2xl text-[var(--lganc-dark-green)]">
               Payment successful
             </h1>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-[var(--lganc-muted)]">
               Thank you! Your payment has been confirmed.
             </p>
           </>
@@ -66,7 +66,7 @@ export default async function CngSuccessPage({
             <h1 className="font-heading text-2xl text-[var(--lganc-orange)]">
               Payment received
             </h1>
-            <p className="mt-2 text-sm text-slate-600">
+            <p className="mt-2 text-sm text-[var(--lganc-muted)]">
               We&apos;re confirming your payment. This usually takes a moment.
               You can close this window.
             </p>
@@ -79,7 +79,7 @@ export default async function CngSuccessPage({
           Done
         </Link>
       </div>
-      <p className="mt-6 text-xs text-slate-500">
+      <p className="mt-6 text-xs text-[var(--lganc-muted)]">
         Powered by KemisPay · Payments processed by Cash N&apos; Go
       </p>
     </div>

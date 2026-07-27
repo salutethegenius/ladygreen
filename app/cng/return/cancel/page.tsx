@@ -11,7 +11,7 @@ export default function CngCancelPage() {
         <h1 className="font-heading text-2xl text-[var(--lganc-dark-green)]">
           Payment cancelled
         </h1>
-        <p className="mt-2 text-sm text-slate-600">
+        <p className="mt-2 text-sm text-[var(--lganc-muted)]">
           No charge was made. You can close this window or return to your
           payment link to try again.
         </p>
@@ -22,7 +22,7 @@ export default function CngCancelPage() {
           Close
         </Link>
       </div>
-      <p className="mt-6 text-xs text-slate-500">
+      <p className="mt-6 text-xs text-[var(--lganc-muted)]">
         Powered by KemisPay · Payments processed by Cash N&apos; Go
       </p>
     </div>

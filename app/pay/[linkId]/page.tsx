@@ -51,7 +51,7 @@ export default async function PayPage({
           </div>
 
           <div className="mb-8 space-y-2 text-center">
-            <p className="font-body text-sm uppercase tracking-wide text-[var(--lganc-light-green)]">
+            <p className="font-body text-sm uppercase tracking-wide text-[var(--lganc-muted)]">
               Payment for
             </p>
             <p className="font-heading text-xl text-[var(--lganc-dark-green)]">

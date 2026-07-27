@@ -155,9 +155,11 @@ export function SettingsForm({ initial }: SettingsFormProps) {
               autoComplete="off"
             />
             <p className="text-xs text-[var(--lganc-dark-green)]/55">
-              Use the URL key labeled{" "}
+              Paste the URL key labeled{" "}
               <span className="font-medium">API_KEY</span> in PayLanes (not the
-              Headers apikey). Leave blank to keep the current value.
+              Headers apikey). If it contains %2F or %3D, paste it as-is — it
+              will be decoded automatically. Leave blank to keep the current
+              value.
             </p>
           </div>
           <div className="space-y-2">

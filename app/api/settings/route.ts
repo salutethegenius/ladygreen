@@ -12,6 +12,23 @@ import {
 } from "@/lib/settings-validation";
 import { enforceRateLimit } from "@/lib/rate-limit-response";
 
+/**
+ * PayLanes shows the URL API_KEY as URL-encoded (%2F, %3D). Users often paste
+ * that exact string into Settings. If we stored it as-is, URLSearchParams would
+ * double-encode it on redirect and break checkout. Decode it once here so the
+ * stored value matches the raw key the provider expects.
+ */
+function normalizeCngApiKey(raw: string): string {
+  if (!raw) return raw;
+  try {
+    const decoded = decodeURIComponent(raw);
+    if (decoded !== raw && /%2[FB]|%3D/i.test(raw)) return decoded;
+  } catch {
+    // not URL-encoded, leave as-is
+  }
+  return raw;
+}
+
 export async function POST(request: Request) {
   const limited = enforceRateLimit(request, "settings", 20);
   if (limited) return limited;
@@ -59,7 +76,7 @@ export async function POST(request: Request) {
   };
 
   // Only overwrite encrypted secrets when a new value is provided
-  if (cngApiKey) updates[SETTINGS_KEYS.cngApiKey] = cngApiKey;
+  if (cngApiKey) updates[SETTINGS_KEYS.cngApiKey] = normalizeCngApiKey(cngApiKey);
   if (cngWebhookSecret)
     updates[SETTINGS_KEYS.cngWebhookSecret] = cngWebhookSecret;
 
